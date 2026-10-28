@@ -32,7 +32,7 @@ import io.restassured.common.mapper.TypeRef;
 
 @QuarkusTest
 @GenerateKeycloakClient(clientName = "testClient", scopes = { "ocx-chat:all", "ocx-chat:read", "ocx-chat:write" })
-@WithDBData(value = "data/testdata-internal.xml", deleteBeforeInsert = true, deleteAfterTest = true, rinseAndRepeat = true)
+@WithDBData(value = "data/testdata-internal.xml", deleteBeforeInsert = true, rinseAndRepeat = true)
 @TestHTTPEndpoint(ChatsRestController.class)
 class ChatRestControllerAIAsyncTest extends AbstractTest {
 
